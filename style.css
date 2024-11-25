@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+/* -----header start ----------------------------------------------------------------------------------- */
+header{
+    display: flex;
+    justify-content:space-between;
+    /* border: 1px solid; */
+    padding: 0 20px;
+    align-items: center;
+    background-color: rgba(24, 87, 66);
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    padding: 0 70px;
+    
+}
+
+.cont1{
+  position: sticky;
+  top: 0;
+}
+ul{
+    display: flex;
+    gap: 70px;
+    list-style-type: none;
+}
+.logo{
+    font-variant: small-caps;
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;  
+    color:white;
+}
+
+#bar{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+/* -----header start ----------------------------------------------------------------------------------- */
+
+/* ------ page-1 start   ------------------------------------------------------------------------------- */
+.cont2{
+  background-color:white;
+  width: 100%;
+  height: 90vh;
+  /* border: 5px solid ; */
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.box1{
+  width: 40%;
+  height: 50vh;
+  border: 5px solid blue;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size:1.7em;
+  box-shadow: 0 0 20px rgba(0,0,0, alpha);
+}
+
+.box2{
+  width: 40%;
+  height: 50vh;
+  border: 5px solid blue;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  text-align: justify;
+}
+.box2 h1{
+  font-size: 3em;
+  color: red;
+}
+.box2 h2{
+  font-size: 2em;
+}
+.box2 p{
+  width:70%;
+  text-align: center;
+}
+
+
+/* ------ page-1 end   ------------------------------------------------------------------------------- */
+
+
+
+
+
+@media(max-width:991px){
+  header{
+    padding: 0 20px;
+  }
+  
+  nav{
+       display:flex;
+       position: absolute;
+       top: 100%;
+       left:-110%;
+       width: 100%;
+       height: 50vh;
+       justify-content: center;
+       background-color: rgba(24, 87, 66);
+       transition: all 1s ease-in;
+       z-index:1;
+       
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+       
+
+      }
+      #check{
+        display:none;
+      }
+      #bar{
+        display: block;
+        color: white;
+      }
+      #check:checked~nav{
+        left: 0;
+      }
+
+      .logo{
+        font-size: 1.5rem;
+      }
+      
+      .cont2 .box1, .box2{
+        width: 43%;
+      }
+
+      .cont2 .box2 h1{
+        font-size: 2em;
+      }
+      .cont2 .box2 h2{
+        font-size: 1.5em;
+      }
+      .cont2 .box1 h2{
+        font-size: 1em;
+        width: 70%;
+      }
+}
+
+@media(max-width:768px){
+      .cont2{
+        flex-direction: column-reverse;
+        padding: 30px 0;
+        gap: 30px;
+        height: fit-content;
+      }    
+      .cont2 .box2 h1{
+        font-size: 1.7em;
+      }
+      .cont2 .box1 h2{
+        font-size: 1em;
+      }
+      .cont2 .box2{
+        gap: 10px;
+        height: 55vh;
+        width: 70%;
+      }
+      .cont2 .box1{
+        gap: 10px;
+        height: 55vh;
+        width: 70%;
+      }
+}
+
+@media(max-width:350px){
+      .cont2 .box1 {
+        width: 80%;
+      }
+      .cont2 .box2 {
+        width: 80%;
+      }
+}
